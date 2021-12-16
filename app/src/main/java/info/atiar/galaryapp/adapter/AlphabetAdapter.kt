@@ -8,9 +8,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import info.atiar.galaryapp.R
-import info.atiar.galaryapp.model.CharItem
+import info.atiar.galaryapp.model.PhotoModel
 
-class AlphabetAdapter(var context: Context, var arrayList: ArrayList<CharItem>) :
+class AlphabetAdapter(var context: Context, var arrayList: ArrayList<PhotoModel>) :
         RecyclerView.Adapter<AlphabetAdapter.ItemHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
@@ -25,7 +25,7 @@ class AlphabetAdapter(var context: Context, var arrayList: ArrayList<CharItem>) 
 
         override fun onBindViewHolder(holder: ItemHolder, position: Int) {
 
-            val charItem: CharItem = arrayList.get(position)
+            val charItem: PhotoModel = arrayList.get(position)
 
             holder.icons.setImageResource(charItem.icons!!)
             holder.titles.text = charItem.alpha
